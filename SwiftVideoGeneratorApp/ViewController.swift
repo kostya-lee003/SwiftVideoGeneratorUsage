@@ -27,8 +27,8 @@ class ViewController: UIViewController {
           VideoGenerator.fileName = MultipleSingleMovieFileName
           VideoGenerator.shouldOptimiseImageForVideo = true
           
-          VideoGenerator.current.generate(withImages: [#imageLiteral(resourceName: "person_jump"), #imageLiteral(resourceName: "person_garage"), #imageLiteral(resourceName: "person_roof"), #imageLiteral(resourceName: "skate"), #imageLiteral(resourceName: "person_sky"), #imageLiteral(resourceName: "person_walls"),], andAudios: [audioURL], andType: .singleAudioMultipleImage, { (progress) in
-            print(progress)
+          VideoGenerator.current.generate(withImages: [#imageLiteral(resourceName: "person_jump"), #imageLiteral(resourceName: "person_garage"), #imageLiteral(resourceName: "person_roof"), #imageLiteral(resourceName: "skate"), #imageLiteral(resourceName: "person_sky"), #imageLiteral(resourceName: "person_walls")], videoDurations: [0.3, 0.1, 0.05, 0.3, 0.05, 0.2], andAudios: [audioURL], andType: .singleAudioMultipleImage, { (progress) in
+          print(progress)
           }) { (result) in
             LoadingView.unlockView()
             switch result {
